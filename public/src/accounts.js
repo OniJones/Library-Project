@@ -1,5 +1,10 @@
 function findAccountById(accounts, id) {
-  return accounts.find((account) => account.id === id);
+  return itemId(accounts, id);
+}
+
+//helper function
+function itemId(items, id) {
+  return items.find ((item) => item.id === id)
 }
 
 function sortAccountsByLastName(accounts) {

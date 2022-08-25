@@ -1,9 +1,14 @@
 function findAuthorById(authors, id) {
-  return authors.find((author) => author.id === id);
+  return itemId(authors, id);
 }
 
 function findBookById(books, id) {
-  return findAuthorById(books, id);
+  return itemId(books, id);
+}
+
+//helper function
+function itemId(items, id) {
+  return items.find ((item) => item.id === id)
 }
 
 function partitionBooksByBorrowedStatus(books) {
