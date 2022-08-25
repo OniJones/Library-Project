@@ -56,7 +56,7 @@ function getMostPopularAuthors(books, authors) {
       'count': works.reduce((acc, book) => acc + book.borrows.length, 0)
     });
   }
-  return popAuthors.sort((a, b) => b['count'] - a['count']).slice(0, 5);
+  return popAuthors.sort((first, second) => second['count'] - first['count']).slice(0, 5);
 }
 
 module.exports = {
